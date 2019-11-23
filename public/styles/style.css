@@ -1,0 +1,57 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    height: 100%;
+    display: grid;
+    background: linear-gradient(60deg, rgba(155, 228, 250), rgba(34, 131, 161));
+}
+
+.wrapper {
+    display:grid;
+    grid-template-rows: 1fr 1fr 2fr 2fr;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid rgb(218,165,32);
+    margin: auto;
+    height: 650px;
+    width: 475px;
+    box-shadow: 1px 1px 5px rgb(34, 131, 161);
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* take out after */ 
+.wrapper > div {
+    border: 1px solid red;
+}
+
+.logo {
+    grid-template-columns: 1fr 1fr;
+    display: grid;
+    align-items: center;
+}
+
+.logo > img {
+    height: 30%;
+    margin: auto;
+}
+
+.title {
+}
+
+.title > h1 {
+    font-weight: normal;
+    color: rgb(92, 92, 92);
+}
+
+form {
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+form > div {
+    border: 1px solid red;
+}
