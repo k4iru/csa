@@ -2,8 +2,11 @@ const express = require('express');
 const path = require('path');
 const db = require('./MOCK_DATA.json');
 const app = express();
+
+// for setting heroku port
 const PORT = process.env.PORT || 3000
 app.use(express.json());
+
 
 async function getSeat(first, last) {
     try {
@@ -31,5 +34,7 @@ app.post('/search', async (req, res) => {
     }
 });
 
+// serve static files
 app.use('/', express.static(path.join(__dirname + '/public')));
+
 app.listen(PORT, () => console.log('running server'));

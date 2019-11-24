@@ -1,8 +1,11 @@
 async function getSeat(){
+
+    // create a fragment to append and remove, safer than direct dom manipularion
     let fragment = new DocumentFragment();
     let node = document.getElementById('seat');
     let searchName = document.getElementById('input_name').value.split(" ");
 
+    // remove old results
     while(node.lastChild) {
         node.removeChild(node.lastChild);
     }
