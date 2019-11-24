@@ -11,7 +11,8 @@ app.use(express.json());
 async function getSeat(first, last) {
     try {
         for (const entry of db) {
-            if (entry.first_name === first && entry.last_name === last) {
+            if (entry.first_name.toLowerCase() === first.toLowerCase()
+                && entry.last_name.toLowerCase() === last.toLowerCase()) {
                 return [entry.floor, entry.seat]
             }
         }
