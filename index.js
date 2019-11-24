@@ -32,4 +32,4 @@ app.post('/search', async (req, res) => {
 });
 
 app.use('/', express.static(path.join(__dirname + '/public')));
-app.listen(3000, () => console.log('running server'));
+app.listen(80, () => console.log('running server'));
