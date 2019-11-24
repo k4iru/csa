@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const db = require('./MOCK_DATA.json');
 const app = express();
-
+const PORT = process.env.PORT || 3000
 app.use(express.json());
 
 async function getSeat(first, last) {
@@ -32,4 +32,4 @@ app.post('/search', async (req, res) => {
 });
 
 app.use('/', express.static(path.join(__dirname + '/public')));
-app.listen(80, () => console.log('running server'));
+app.listen(PORT, () => console.log('running server'));
