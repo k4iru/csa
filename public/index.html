@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="utf-8">
+        <meta charset="utf-8" />
 
         <title>Case Ware Seat Finder</title>
 
-        <meta name="description" content="site">
-        <meta name="viewport" content="width=device-width", initial-scale=1">
-
-
-        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="styles/style.css">
+        <meta name="description" content="site" />
+        <meta name="viewport" content="width=device-width">
+        <link rel="icon" type="image/png" href="images/apple-touch-icon.png" />
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="styles/style.css" />
+        <link rel="stylesheet" href="styles/queries.css" />
         <script src="scripts/script.js"></script>
     </head>
     <body>
         <div class="wrapper">
             <div class="logo">
-                <img src="images/CaseWare_logo_4C_horz.svg" alt="logo" \>
+                <img src="images/CaseWare_logo_4C_horz.svg" alt="logo" />
             </div>
             <div class="title center">
                 <h1>Seat Lookup</h1>
             </div>
-            <form>
-                <div class="center"><input type="text" name="name"></div>
-                <div class="center"><button class="button">GO</button></div>
-            </form>
-            <div class="seat"></div>
+            <div class="center">
+                <input id="input_name" type="text" name="name">
+            </div>
+            <div class="center">
+                <button 
+                 class="button" 
+                 name="name"
+                 onclick="getSeat()">GO</button>
+            </div>
+            <div id="seat">
+            </div>
         </div>
     </body>
 </html>
